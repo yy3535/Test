@@ -1,0 +1,22 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "教学专用",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yy3535/Test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yy3535/Test/issues"
+  },
+  "homepage": "https://github.com/yy3535/Test#readme",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
