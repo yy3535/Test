@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="一个伪文青IT攻城狮在追求梦想路上的痴言妄语,代码青春。" />
+	<meta name="keywords" content="喵大工程师,喵大攻城狮,伪极客,大喵博客,李宗博客,geekv,running`s blog,running,个人博客" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+	<meta http-equiv="Cache-Control" content="no-transform " />
+	<meta name="full-screen" content="yes">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="browsermode" content="application">
+	<meta name="x5-page-mode" content="app">
+    <title>喵大攻城狮 - 「生命不息 · 折騰不止」</title>
+    <link rel="stylesheet" href="/public/css/index.css">
+    <script
+    src="http://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="/public/js/juicer-min.js"></script>
+    <script src="/public/js/jquery.pjax.js"></script>
+    <script src="/public/js/index.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="main-header" style="background-image:url(//o0xihan9v.qnssl.com/wp-content/uploads/2015/08/meow2.jpg);background-position:center center;background-size:cover;" >
+            <div id="header-wrap">
+                <div id="logo">
+                    <h1><a href="index" title="喵大攻城狮">喵大攻城狮</a></h1>
+                    <h2>「生命不息 · 折騰不止」</h2>
+                    <div class="logo-img" >
+                            <img class="avatar" src="//o0xihan9v.qnssl.com/wp-content/uploads/2017/01/avatar.jpg" title="喵大攻城狮"/>
+                    </div>
+                    <div id="logo-music">
+                        <div id="logo-music-name" style="display: block; opacity: 0; top: 0px;"></div>
+                        <div id="logo-music-prev"></div>
+                        <div id="logo-music-play" style="display: none;"></div>
+                        <div id="logo-music-pause" style="display: none;"></div>
+                        <div id="logo-music-next"></div>
+                        <div class="loading">
+                            <div class="loading-bar">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>
+                                <div class="bar4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="logo_jplayer" class="jp-jplayer" style="width: 0px; height: 0px;">
+                        <img id="jp_poster_0" style="width: 0px; height: 0px; display: none;">
+                        
+                    </div>
+                </div>
+                <button id="openlist" class="open"><span></span><span></span><span></span>playlist</button>
+                <button id="openmenu" class="open"><span></span><span></span><span></span>menu</button>
+                
+                <nav id="main-nav">
+                    <div class="menu-%e6%88%91%e7%9a%84%e8%8f%9c%e5%8d%95-container"><ul id="menu-%e6%88%91%e7%9a%84%e8%8f%9c%e5%8d%95" class="nav-menu">
+                        <li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-6"><a href="index">首页</a></li>
+                        <li id="menu-item-7" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7"><a href="locallhost:8080/about">关於</a></li>
+                        <li id="menu-item-132" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-132"><a href="#">青春代碼</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-78" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-78"><a href="https://bigmeow.cn/./young-code/note">笔記</a></li>
+                                <li id="menu-item-77" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-77"><a href="https://bigmeow.cn/./young-code/over-and-over-again">折騰</a></li>
+                                <li id="menu-item-76" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-76"><a href="https://bigmeow.cn/./young-code/work">工作</a></li>
+                                <li id="menu-item-193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-193"><a href="https://bigmeow.cn/works">作品</a></li>
+                                <li id="menu-item-9" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9"><a href="https://bigmeow.cn/links">书签</a></li>
+                                <li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-91"><a title="_blank" href="//bigmeow.cn/tools/">代码高亮</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-11" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11"><a href="https://bigmeow.cn/./tea-words">洒家茶話</a></li>
+                        <li id="menu-item-126" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-126"><a title="_blank" href="http://one.bigmeow.cn">文艺少年</a></li>
+                        <li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a href="https://bigmeow.cn/all-archive">归档</a></li>
+                        <li id="menu-item-143" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-143"><a href="#">相册</a>
+                        <ul class="sub-menu">
+                            <li id="menu-item-153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153"><a href="https://bigmeow.cn/home">家</a></li>
+                            <li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="https://bigmeow.cn/cats">喵</a></li>
+                            <li id="menu-item-188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188"><a href="https://bigmeow.cn/ago">旧</a></li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </div>				
+                </nav>
+                <form role="search" method="get" id="search-form" style="margin-bottom: 12px; opacity: 1;" action="https://bigmeow.cn/">
+					<div>
+						<input type="text" value="Search" name="s" id="s" onblur="if ( this.value == '' ){this.value='Search';}" onfocus = "if ( this.value == 'Search' ){this.value = '';}" />
+					</div>
+				</form>
+				<div class="clear"></div>
+            </div>
+        </header>
+        <!--header-->
+        <div class="topfixed_bg" ></div>
+        <div id="main" class="main-narrow">		
+            <div id="content" class="post-index">
+                <template id="tpl-content">
+                    {@each articleList as item}
+                    <article id="post-98" style="opacity: 1; position: absolute; left: 0px; top: 0px;" > 
+                        <!-- class="post-98 post type-post status-publish format-standard hentry category-tea-words" -->
+                        <div class="article-wrap">
+                            <header class="entry-header">
+                                <h1>
+                                    <a data-pjax href="http://localhost:8080/article-detail" rel="bookmark" class="post-title" title = "${item.title}">
+                                        <a data-pjax  href="http://localhost:8080/article-detail" rel="bookmark" class="post-title" title = "${item.title}">
+                                        ${item.title}
+                                    </a>
+                                    <span class="meta-time">${item.createDate}</span>
+                                </h1>
+                            </header>
+                            <div class="entry-content">
+                                <p>
+                                    <a data-pjax href="http://localhost:8080/article-detail" class="post-title" title="${item.title}" rel="bookmark" >
+                                        <img src="https://o0xihan9v.qnssl.com/wp-content/uploads/2016/01/1437464131114260.jpg" />
+                                    </a>
+                                </p>
+                                <p>
+                                    ${item.content}
+                                </p>		
+                            </div>
+                        </div>
+                    </article>
+                    {@/each}
+                </template>
+            </div>
+        </div>
+        <!--main-->
+        <footer id="main-footer">
+            <div id="footer-widget">
+                <aside id="footer-comments" class="foo-widget" style="display: block; padding-left: 30px; padding-right: 30px;">
+                    <h3>最新评论</h3>
+                    <ul>
+                        <li>
+                            <span class="recent-comments-avatar"><img alt="" src="https://secure.gravatar.com/avatar/305772106b200d6fde4f9190015cea47?s=32&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/305772106b200d6fde4f9190015cea47?s=64&amp;d=mm&amp;r=g 2x" class="avatar avatar-32 photo" height="32" width="32"></span>
+                            <a href="https://bigmeow.cn/tea-words/programmer-style-xiuzhen-of-novel.html#comment-316" title="三五营销软件在程序猿风格的修真小说发表的评论">能让人来访的乐此不疲，这里就是</a>
+                        </li>
+                    
+                        <li>
+                            <span class="recent-comments-avatar"><img alt="" src="https://secure.gravatar.com/avatar/1c62e327c6c30050647c4fb7898d4314?s=32&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/1c62e327c6c30050647c4fb7898d4314?s=64&amp;d=mm&amp;r=g 2x" class="avatar avatar-32 photo" height="32" width="32"></span>
+                            <a href="https://bigmeow.cn/tea-words/programmer-style-xiuzhen-of-novel.html#comment-315" title="沃八达在程序猿风格的修真小说发表的评论">没事就来转一转，每天多吃两碗饭</a>
+                        </li>
+                    
+                        <li>
+                            <span class="recent-comments-avatar"><img alt="" src="https://secure.gravatar.com/avatar/8007e1cac67e14dd532926ff339f9bcc?s=32&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/8007e1cac67e14dd532926ff339f9bcc?s=64&amp;d=mm&amp;r=g 2x" class="avatar avatar-32 photo" height="32" width="32"></span>
+                            <a href="https://bigmeow.cn/tea-words/programmer-style-xiuzhen-of-novel.html#comment-313" title="三五游戏在程序猿风格的修真小说发表的评论">这里来不够，看不够，玩不够！</a>
+                        </li>
+                    
+                        <li>
+                            <span class="recent-comments-avatar"><img alt="" src="https://secure.gravatar.com/avatar/52d98478972769e4999d4603e5b990c8?s=32&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/52d98478972769e4999d4603e5b990c8?s=64&amp;d=mm&amp;r=g 2x" class="avatar avatar-32 photo" height="32" width="32"></span>
+                            <a href="https://bigmeow.cn/tea-words/programmer-style-xiuzhen-of-novel.html#comment-309" title="笑八达在程序猿风格的修真小说发表的评论">世间博客不少，风景这边独好！</a>
+                        </li>
+                    </ul>
+                </aside>
+                <aside id="footer-tags" class="foo-widget" style="display: block; padding-left: 30px; padding-right: 30px;">
+                    <h3>热门标签</h3>
+                    <ul class="wp-tag-cloud">
+                        <li>
+                            <a href="https://bigmeow.cn/tag/wordpress" class="tag-link-8 tag-link-position-1" title="1 topic" style="font-size: 12px;">wordpress</a>
+                        </li>
+                    </ul>
+                    <ul>
+                    </ul>
+                </aside>
+                <aside id="footer-readwall" class="foo-widget readwall" style="display: block; padding-left: 30px; padding-right: 30px;">
+                    <h3>留言墙</h3>
+                    <ul>
+                        <li>
+                            <a href="http://geekv.net" target="_blank">
+                                <img alt="" src="https://secure.gravatar.com/avatar/9f0230ad89506f5c36c192784b5a0bff?s=46&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/9f0230ad89506f5c36c192784b5a0bff?s=92&amp;d=mm&amp;r=g 2x" class="avatar avatar-46 photo" height="46" width="46">
+                            </a>
+                            <span class="author" style="display:none"></span>
+                            <div class="detail">
+                                <a href="http://geekv.net" target="_blank" class="author"><img alt="" src="https://secure.gravatar.com/avatar/9f0230ad89506f5c36c192784b5a0bff?s=46&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/9f0230ad89506f5c36c192784b5a0bff?s=92&amp;d=mm&amp;r=g 2x" class="avatar avatar-46 photo" height="46" width="46">Running</a>
+                                <span class="count">总评论数：5</span>
+                                <a href="https://bigmeow.cn/tea-words/programmer-style-xiuzhen-of-novel.html#comment-135" class="recent-comment">最后留言：脑洞大开</a>
+                                <span>（这家伙已经"2 years"没有留言了！）</span>
+                                <div class="triangle">
+                                    <div></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+			<div id="footer-copy">
+				<div class="social">
+					<a rel="nofollow" target="_blank" href="/feed" class="dwtip-top" title="RSS订阅我"><i class="icon-rss"></i></a> 
+					<a rel="nofollow" href="mailto:runn&#105;&#110;&#103;&#64;&#118;ip.1&#54;3.&#99;&#111;m" class="dwtip-top" title="电子邮件"><i class="icon-mail"></i></a>
+					<a rel="nofollow" target="_blank" href="http://weibo.com/mrlizong" class="dwtip-top" title="新浪微博"><i class="icon-weibo "></i></a>
+					<a rel="nofollow" target="_blank" href="https://github.com/bigmeow/" class="dwtip-top" title="Github"><i class="icon-github"></i></a>
+				</div>
+				copyright &copy;2015-2017&nbsp;&nbsp;喵大攻城狮&nbsp;&nbsp;湘ICP备15002244号&nbsp;&nbsp;			</div>
+			<div class="clear"></div>
+        </footer>
+        <!--footer-->
+        
+    </div>
+    
+
+</body>
+</html>
