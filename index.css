@@ -2,6 +2,9 @@ body{
     margin: 0;
     padding: 0;
 }
+a{
+    text-decoration: none;
+}
 .wrapper{
     
     margin: 0 auto;
@@ -9,6 +12,9 @@ body{
 }
 @media screen and (min-width:320px) and (max-width:750px) {
     .wrapper{
+        width: 100%;
+    }
+    header{
         width: 100%;
     }
     #slide,.slide_li{
@@ -21,6 +27,9 @@ body{
     .wrapper{
         width: 100%;
     }
+    header{
+        width: 100%;
+    }
     #slide, .slide_li{
         width:100%;
         height: 750px;
@@ -31,6 +40,9 @@ body{
     .wrapper{
         width: 100%;
     }
+    header{
+        width: 100%;
+    }
     #slide, .slide_li{
         width:100%;
         height: 750px;
@@ -38,6 +50,9 @@ body{
 }
 @media screen and (min-width:1440px) {
     .wrapper{
+        width: 1440px;
+    }
+    header{
         width: 1440px;
     }
     #slide, .slide_li{
@@ -52,7 +67,7 @@ body{
     float: left;
     height: 100%;
     width: 50px;
-    margin: 10px 30px;
+    margin-top: 5px;
 }
 .nav{
     background: url(http://static.smartisanos.cn/index/assets/images/nav-toggle.fd65b0d4fd9c13af497959bd29355bd6.png) no-repeat right;
@@ -66,14 +81,18 @@ body{
     transition: none;
 }
 header{
-    z-index: -1;
     height: 50px;
     background: white;
+    position: fixed;
+    top:0px;
+    z-index: 9999;
+    overflow: hidden;
+    padding: 10px;
 }
 .main{
     margin: 0 auto;
 }
-#section01{
+#section01,#section02,#section03{
     width: 100%;
     overflow: hidden;
 }
@@ -114,6 +133,10 @@ ul,li{
 .dot{
     background: url(img/dot.png) no-repeat;
 }
+.dot:hover{
+    cursor: pointer;
+    background: url(img/dot_current.png) no-repeat;
+}
 .slide_li{
     position: absolute;
 }
@@ -128,6 +151,50 @@ ul,li{
 .slide03{
     background: url(img/slide03.png) no-repeat center;
     background-size: cover;
+}
+#section02{
+    height: 750px;
+    background: url(img/section02_bg.png) no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 35px;
+    
+}
+.text_wrapper{
+    width: 39%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 300px;
+}
+.text_wrapper h2{
+    font-weight: normal;
+}
+#section02 p{
+    font-family: "小塚ゴシック Pr6N";
+    font-size: 14px;
+    font-weight: lighter;
+    padding-top: 40px;
+}
+#section03{
+    height: 1100px;
+    background: url(img/section03_bg.png) no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 35px;
+}
+#section03 a{
+    font-size: 20px;
+    color: white;
+    margin-right: 55px;
+}
+#section03 a:last-child{
+    margin-right: 0px;
+}
+#section03 a:hover{
+    border-bottom: 1px solid white;
+}
+#section03 .active{
+    border-bottom: 1px solid white;
 }
 .hide{
     opacity: 0;
