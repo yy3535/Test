@@ -106,6 +106,29 @@ $(function(){
             });
         }
     })
+
+    //数据
+	   $.ajax({
+	       type:'get',
+	       url:'cate.json',
+	       async:true,
+	       success:function(data){
+	           var tplStr=$("#tpl_card").html();
+	           //榨汁机模板引擎
+	           var str=juicer(tplStr,data);
+	           $("#ul_card_wrapper").html(str);
+	       }
+	   });
+
+//  $.ajax({
+//      type:'get',
+//      url:'JSON/cate.json',
+//      async:true,
+//      success:function(data){
+//          console.log()
+//      }
+//  });
+    
     
 
 

@@ -40,7 +40,7 @@
                 </ul>
             </div>
             <div id="section02">
-                <div id="section02_wrapper" class="text_wrapper">
+                <div id="section02_wrapper" class="text_wrapper02">
                         <h2>Section/02</h2>
                         <p>私は昔何だかその妨害人に対してつもりの以上からあるですだろ。<br/>
                         ああ一番に関係院もどうしてもその料理ならたまでをありていたでは指導あっませありで、突然には困らでしょなずな。欄に云ったのは向後場合がすなわちなでだ。<br/><br/>
@@ -50,16 +50,26 @@
                 
             </div>
             <div id="section03">
-                <div class="text_wrapper">
+                <div id="section03_wrapper" class="text_wrapper03">
                     <h2>Section/03</h2>
                     <a href="" class="active">all</a>
                     <a href="">cate01</a>
                     <a href="">cate02</a>
                     <a href="">cate03</a>
+                    <ul id="ul_card_wrapper">
+                    </ul>
                     <template id="tpl_card">
-                        <div>
-                            
-                        </div>
+                        {@each list as item}
+                        <li class="li_card">
+                            <img src='JSON/${item.thumb}' alt="">
+                            <h4>${item.title}</h4>
+                            <p>${item.description}</p>
+                            {@each item.cate as it}
+                                <span>it</span>
+                            {@/each}
+                        </li>
+                        {@/each}
+                        
                     </template>
                     
                 </div>

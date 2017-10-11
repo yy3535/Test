@@ -1,4 +1,4 @@
-body{
+body,h1,h2,h3,h4,h5,h6,p{
     margin: 0;
     padding: 0;
 }
@@ -160,13 +160,13 @@ ul,li{
     font-size: 35px;
     
 }
-.text_wrapper{
+.text_wrapper02{
     width: 39%;
     margin: 0px auto;
     text-align: center;
     margin-top: 300px;
 }
-.text_wrapper h2{
+.text_wrapper02,.text_wrapper03 h2{
     font-weight: normal;
 }
 #section02 p{
@@ -195,6 +195,48 @@ ul,li{
 }
 #section03 .active{
     border-bottom: 1px solid white;
+}
+.text_wrapper03{
+    width: 75%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top:90px;
+}
+.text_wrapper03 h2{
+	margin-bottom: 40px;
+}
+#section03_wrapper ul{
+	width:100%;
+	overflow: hidden;
+	text-align: left;
+	margin-top:25px;
+}
+.li_card{
+    float: left;
+    background: white;
+    width:325px;
+    height: 380px;
+    margin:8px;
+    padding: 8px;
+    border-radius: 5px;
+}
+.li_card h4{
+	font-family: "小塚ゴシック Pr6N";
+	font-size: 17px;
+	color: #1e3058;
+}
+.li_card p{
+	font-family: "小塚ゴシック Pr6N";
+	font-size:14px;
+	color: #697279;
+	line-height: 23px;
+}
+.li_card span{
+	font-size: 12px;
+	display: block;
+	width:30px;
+	height: 10px;
+	background: #989898;
 }
 .hide{
     opacity: 0;
