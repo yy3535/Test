@@ -14,9 +14,20 @@
 <body>
     <div class="wrapper">
         <header>
-            <a href="" class="logo"></a>
-            <a href="" class="nav"></a>
+            <div class="logo"></div>
+            <div class="nav">
+            	<div id="weixin2">
+            		
+            	</div>
+            	<ul id="nav_content">
+		        	<li>首页</li>
+		        	<li>首页</li>
+		        	<li>首页</li>
+		        </ul>
+            </div>
+            
         </header>
+        
         <div class="main">
             <div id="section01">
                 <ul id="slide">
@@ -52,21 +63,22 @@
             <div id="section03">
                 <div id="section03_wrapper" class="text_wrapper03">
                     <h2>Section/03</h2>
-                    <a href="" class="active">all</a>
-                    <a href="">cate01</a>
-                    <a href="">cate02</a>
-                    <a href="">cate03</a>
+                    <a class="active">all</a>
+                    <a>cate01</a>
+                    <a>cate02</a>
+                    <a>cate03</a>
                     <ul id="ul_card_wrapper">
                     </ul>
                     <template id="tpl_card">
                         {@each list as item}
                         <li class="li_card">
-                            <img src='JSON/${item.thumb}' alt="">
+                             <img src='JSON/${item.thumb}' alt=""> 
                             <h4>${item.title}</h4>
-                            <p>${item.description}</p>
+                             <p>${item.description}</p> 
                             {@each item.cate as it}
-                                <span>it</span>
+                                <span>${it.name}</span>
                             {@/each}
+                        
                         </li>
                         {@/each}
                         
@@ -75,8 +87,15 @@
                 </div>
             </div>
         </div>
+        <div id="right">
+			<div id="btn">
+				<div id="weixin2">
+					
+				</div>
+			</div>
+		</div>
         <footer>
-
+			<p>COPYRIGHT © testtest ALL RIGHTS RESERVED.</p>
         </footer>
     </div>
 </body>

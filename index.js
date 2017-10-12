@@ -7,6 +7,9 @@ $(function(){
     var dots=$(".dot_wrapper li");
     var slide_timer;
     var isAutoPlay=true;
+    var isCardShow=false;
+    var section03Data={};
+    var newSection03Data={};
     function setTimer(){
         slide_timer=setInterval(function(){
             switchImg();
@@ -96,7 +99,6 @@ $(function(){
      * section02动画效果
      */
     $(window).on('scroll',function(){
-        console.log('滚动了');
         var scrollTop=$(window).scrollTop();
         var marginTop=$("#section02_wrapper").css("margin-top");
         if(scrollTop>=453&&marginTop=="300px"){
@@ -105,31 +107,103 @@ $(function(){
             },500,function(){
             });
         }
+        var opcity=$("#ul_card_wrapper").css("opacity");
+        if(scrollTop>=1064&&opcity==0){
+        	$("#ul_card_wrapper").animate({
+        		opacity:1
+        	},1000)
+        }
     })
 
+	/**
+	 * 窗口尺寸改变事件
+	 */
+//	$(window).on('resize',function(){
+//		//var section03Height=
+//		
+//		//$("#section03").css('height',);
+//	})
+
     //数据
-	   $.ajax({
-	       type:'get',
-	       url:'cate.json',
-	       async:true,
-	       success:function(data){
-	           var tplStr=$("#tpl_card").html();
-	           //榨汁机模板引擎
-	           var str=juicer(tplStr,data);
-	           $("#ul_card_wrapper").html(str);
-	       }
-	   });
-
-//  $.ajax({
-//      type:'get',
-//      url:'JSON/cate.json',
-//      async:true,
-//      success:function(data){
-//          console.log()
-//      }
-//  });
+    $.ajax({
+        type:'get',
+        url:'cate1.json',
+        async:true,
+        success:function(data){
+        	section03Data=data;        	
+        	//更新card数据
+            cardDataUpdate(section03Data);
+            isCardShow=true;
+        }
+    });
+    
+    //card数据更新
+    function cardDataUpdate(data){
+    	var tplStr=$("#tpl_card").html();
+        //榨汁机模板引擎
+        var str=juicer(tplStr,data);
+        $("#ul_card_wrapper").html(str);
+        
+        if(isCardShow){
+        	$("#ul_card_wrapper").animate({
+	    		opacity:1
+	    	},500);
+        }
+                
+        
+        //span标签绑定筛选事件
+        $("#ul_card_wrapper span").on('click',function(){
+			cateFilter($(this).html());
+		});
+    }
+    
+    /**
+     * section03筛选
+     */
+    function cateFilter(selectedCate){ 
+    	//导航选中效果设置
+    	$("#section03 a").removeClass("active");
+    	var index=(selectedCate=="all"?0:parseInt(selectedCate.charAt(selectedCate.length-1)));
+		$($("#section03 a")[index]).addClass("active");
+    	
+    	$("#ul_card_wrapper").animate({
+    		opacity:0
+    	},500,function(){
+    		if(selectedCate=="all"){
+    			cardDataUpdate(section03Data);
+    			
+	    	}else{
+	    		filteredData(selectedCate);
+				cardDataUpdate(newSection03Data);
+	    	}
+    	});
+    	
+    	
+    	
+    	function filteredData(selectedCate){
+    		newSection03Data={
+    			list:[]
+    		};
+    		
+    		for(var i=0;i<section03Data.list.length;i++){
+    			for(var j=0;j<section03Data.list[i].cate.length;j++){
+    				var cateInCardString=JSON.stringify(section03Data.list[i].cate);
+    				if(cateInCardString.indexOf(selectedCate)!=-1){
+    					newSection03Data.list.push(section03Data.list[i]);
+    					break;
+    				}
+    			}
+    			
+    		}
+    	}
+    }
     
     
-
+	$("#section03 a").on('click',function(){
+		$("#section03 a").removeClass("active");
+		$(this).addClass("active");
+		cateFilter($(this).html());
+	});
+	
 
 });

@@ -1,6 +1,9 @@
-body,h1,h2,h3,h4,h5,h6,p{
+body,h1,h2,h3,h4,h5,h6,p,ul,li{
     margin: 0;
     padding: 0;
+}
+ul{
+    list-style: none;
 }
 a{
     text-decoration: none;
@@ -21,7 +24,12 @@ a{
         width:100%;
         height: 500px;
     }
-
+    .text_wrapper02{
+	    width: 70%;
+	}
+    .text_wrapper03{
+	    width: 95%;
+	}
 }
 @media screen and (min-width:751px) and (max-width:979px){
     .wrapper{
@@ -34,7 +42,12 @@ a{
         width:100%;
         height: 750px;
     }
-    
+    .text_wrapper02{
+	    width: 39%;
+	}
+    .text_wrapper03{
+	    width: 85%;
+	}
 }
 @media screen and (min-width:980px) and (max-width:1440px) {
     .wrapper{
@@ -47,18 +60,30 @@ a{
         width:100%;
         height: 750px;
     }
+    .text_wrapper02{
+	    width: 39%;
+	}
+    .text_wrapper03{
+	    width: 80%;
+	}
 }
 @media screen and (min-width:1440px) {
     .wrapper{
         width: 1440px;
     }
     header{
-        width: 1440px;
+        width: 1420px;
     }
     #slide, .slide_li{
         width:100%;
         height: 750px;
     }
+    .text_wrapper02{
+	    width: 39%;
+	}
+    .text_wrapper03{
+	    width: 70%;
+	}
 }
 .logo{
     background: url(img/logo.png) no-repeat left;
@@ -79,18 +104,51 @@ a{
     padding: 0 10px;
     width: 100px;
     transition: none;
+    position: relative;
 }
 header{
     height: 50px;
     background: white;
     position: fixed;
     top:0px;
-    z-index: 9999;
+    z-index: 9998;
     overflow: hidden;
     padding: 10px;
 }
+#right{
+	position: fixed;
+	
+	bottom: 0;
+	width:100%;
+	height: 50px;
+	background: yellow;
+}
+#btn{
+	width:200px;
+	height: 50px;
+	background: lightgreen;
+	position: relative;
+}
+#weixin2{
+	width:50px;
+	height: 50px;
+	background: green;
+	position: absolute;
+	left: 0px;
+	top: -50px;
+}
+#nav_content{
+	width:200px;
+	z-index: 9999;
+	position: absolute;
+	bottom: -200px;
+	background: red;
+	border: 1px solid red;
+	padding: 12px;
+}
 .main{
     margin: 0 auto;
+    margin-top: 70px;
 }
 #section01,#section02,#section03{
     width: 100%;
@@ -102,10 +160,7 @@ header{
     list-style: none;
     overflow: hidden;
 }
-ul,li{
-    margin: 0;
-    padding: 0;
-}
+
 #slide{
     position: relative;
 }
@@ -153,15 +208,15 @@ ul,li{
     background-size: cover;
 }
 #section02{
-    height: 750px;
+    min-height: 750px;
     background: url(img/section02_bg.png) no-repeat;
     background-size: cover;
     color: white;
     font-size: 35px;
+    padding-bottom: 80px;
     
 }
 .text_wrapper02{
-    width: 39%;
     margin: 0px auto;
     text-align: center;
     margin-top: 300px;
@@ -176,16 +231,17 @@ ul,li{
     padding-top: 40px;
 }
 #section03{
-    height: 1100px;
     background: url(img/section03_bg.png) no-repeat;
     background-size: cover;
     color: white;
     font-size: 35px;
+    padding-bottom: 60px;
 }
 #section03 a{
     font-size: 20px;
     color: white;
     margin-right: 55px;
+    cursor: pointer;
 }
 #section03 a:last-child{
     margin-right: 0px;
@@ -197,7 +253,6 @@ ul,li{
     border-bottom: 1px solid white;
 }
 .text_wrapper03{
-    width: 75%;
     margin: 0px auto;
     text-align: center;
     margin-top:90px;
@@ -210,15 +265,20 @@ ul,li{
 	overflow: hidden;
 	text-align: left;
 	margin-top:25px;
+	opacity: 0;
 }
 .li_card{
     float: left;
     background: white;
-    width:325px;
-    height: 380px;
+    width:300px;
+    height: 362px;
     margin:8px;
     padding: 8px;
     border-radius: 5px;
+}
+.li_card img{
+	width: 300px;
+	height: 200px;
 }
 .li_card h4{
 	font-family: "小塚ゴシック Pr6N";
@@ -232,12 +292,29 @@ ul,li{
 	line-height: 23px;
 }
 .li_card span{
+	float: left;
 	font-size: 12px;
 	display: block;
-	width:30px;
-	height: 10px;
-	background: #989898;
+    width:60px;
+    height: 25px;
+    background: #989898;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 25px;
+    margin-top: 25px;
+    margin-right: 5px;
+    cursor: pointer;
 }
+footer{
+	width: 100%;
+	height: 100px;
+	background: black;
+	text-align: center;
+	color: #bbbbbb;
+	font-size:12px;
+	padding-top: 25px;
+}	
+
 .hide{
     opacity: 0;
 }
