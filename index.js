@@ -10,6 +10,7 @@ $(function(){
     var isCardShow=false;
     var section03Data={};
     var newSection03Data={};
+    var menu=$("#nav_content");
     function setTimer(){
         slide_timer=setInterval(function(){
             switchImg();
@@ -115,15 +116,6 @@ $(function(){
         }
     })
 
-	/**
-	 * 窗口尺寸改变事件
-	 */
-//	$(window).on('resize',function(){
-//		//var section03Height=
-//		
-//		//$("#section03").css('height',);
-//	})
-
     //数据
     $.ajax({
         type:'get',
@@ -206,4 +198,20 @@ $(function(){
 	});
 	
 
+	/**
+	 * 弹出菜单
+	 */
+	$(".nav").on('click',function(event){
+		event.stopPropagation();
+		menu.fadeToggle();		
+	});
+	
+	/**
+	 * 
+	 */
+	$("body").on('click',function(){
+		if(menu.css("display")=="block"){
+			menu.fadeOut();
+		}
+	})
 });

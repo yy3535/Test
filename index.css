@@ -17,7 +17,7 @@ a{
     .wrapper{
         width: 100%;
     }
-    header{
+    #top{
         width: 100%;
     }
     #slide,.slide_li{
@@ -35,7 +35,7 @@ a{
     .wrapper{
         width: 100%;
     }
-    header{
+    #top{
         width: 100%;
     }
     #slide, .slide_li{
@@ -53,7 +53,7 @@ a{
     .wrapper{
         width: 100%;
     }
-    header{
+    #top{
         width: 100%;
     }
     #slide, .slide_li{
@@ -71,8 +71,8 @@ a{
     .wrapper{
         width: 1440px;
     }
-    header{
-        width: 1420px;
+    #top{
+        width: 1440px;
     }
     #slide, .slide_li{
         width:100%;
@@ -101,7 +101,7 @@ a{
     background-origin: content-box;
     float: right;
     height: 100%;
-    padding: 0 10px;
+    
     width: 100px;
     transition: none;
     position: relative;
@@ -115,36 +115,50 @@ header{
     overflow: hidden;
     padding: 10px;
 }
-#right{
+#top{
 	position: fixed;
-	
-	bottom: 0;
-	width:100%;
+	top: 0;
 	height: 50px;
-	background: yellow;
-}
-#btn{
-	width:200px;
-	height: 50px;
-	background: lightgreen;
-	position: relative;
-}
-#weixin2{
-	width:50px;
-	height: 50px;
-	background: green;
-	position: absolute;
-	left: 0px;
-	top: -50px;
+	background: white;
+	padding: 10px 0px;
 }
 #nav_content{
 	width:200px;
 	z-index: 9999;
 	position: absolute;
-	bottom: -200px;
-	background: red;
-	border: 1px solid red;
-	padding: 12px;
+	bottom: -167px;
+	right: 0px;
+	background: #000;
+	color: #999;
+	display: none;
+}
+#nav_content li{
+	padding: 15px 0px;
+	border-bottom: 1px solid #141414;
+	color: #ddd;
+	width: 100%;
+}
+#nav_content li:hover{
+	background: #1E3058;
+}
+#nav_content a{
+	width: 160px;
+	padding: 0px 20px;
+	position: relative;
+	display: block;
+}
+#nav_content a:after{
+	background: url(//static.smartisanos.cn/index/assets/images/arrow-icons.8faabdf388e0305758f4ad1d6905ccd6.png) no-repeat;
+    background-size: contain;
+    content: " ";
+    height: 10px;
+    width: 20px;
+    opacity: 0.3;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 .main{
     margin: 0 auto;
